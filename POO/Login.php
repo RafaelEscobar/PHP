@@ -4,8 +4,7 @@ session_start();// seccion start es clave para inicio de seccion
 if ($_SESSION) {
     header("location:http://localhost\clases_PHP\POO\sesionIniciada.php");
 }
-   $error=$_REQUEST['error'] ?? '';
-
+$error = $_REQUEST['error'] ?? '';
 ?>
 <!doctype html>
 <html lang="en">
@@ -92,7 +91,7 @@ if ($_SESSION) {
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button><?php echo $error;?>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button><h6 id="error"></h6><?php echo $error;?></h1>
 
         <p class="mt-5 mb-3 text-muted"></p>
     </form>
@@ -100,3 +99,4 @@ if ($_SESSION) {
 </body>
 
 </html>
+

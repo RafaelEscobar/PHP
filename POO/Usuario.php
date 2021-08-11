@@ -18,6 +18,7 @@ class Usuario{
         $query->execute();
         $usuario = $query->fetch(PDO::FETCH_ASSOC);
         print_r($usuario);
+        
         if ($usuario) {
             $_SESSION['id'] = $usuario['ID'];
             $_SESSION['email'] = $usuario['EMAIL'];
@@ -25,8 +26,8 @@ class Usuario{
             header("location:http://localhost\clases_PHP\POO\sesionIniciada.php");
         } else {
             $error = "Los credenciales son incorrectos";
-            
             header("Location: http://localhost/clases_PHP/POO/Login.php?error=$error");
+            
         }
         
     }
